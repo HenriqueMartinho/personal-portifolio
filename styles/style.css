@@ -122,12 +122,13 @@ section.top-side .top-side-txt p {
     text-shadow: 2px 2px 0 black;
 }
 
-section.top-side .top-side-txt p span{
+section.top-side .top-side-txt p span {
     font-size: 20px;
-    color: #ec9c46;
+    color: #FFD700;
 }
-section.top-side .top-side-txt p span:last-child{
-    font-size: 20px;
+
+section.top-side .top-side-txt p span:last-child {
+    font-size: 18px;
     color: #6c9ed8;
 }
 
@@ -271,4 +272,64 @@ section.about-me .flex {
     font-size: 22px;
     cursor: pointer;
     transition: .2s;
+}
+
+/* VIEWPORT */
+
+@media screen and (max-width: 1024px) {
+    .flex {
+        flex-direction: column;
+    }
+
+    /* HEAD */
+    .menu,
+    .btn-contato {
+        display: none;
+    }
+
+    /* TOP-SIDE */
+    section.top-side {
+        margin-left: 0;
+        padding: 140px 4%;
+        text-align: center;
+    }
+
+    .top-side-txt {
+        margin: 0;
+        padding: 0 10px;
+    }
+
+    .img-top {
+        margin-bottom: -120px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .img-top .img-back {
+        width: 90vw;
+    }
+
+    .img-top .img-front {
+        width: 25vw;
+    }
+
+    section.top-side .top-side-txt h1 {
+        font-size: 32px;
+        line-height: 30px;
+    }
+
+    /* PROJECTS BOX */
+
+    section.projects {
+        padding: 30px 8%
+    }
+
+    /* ABOUT ME */
+
+    .btn-social{
+        padding: 20px;
+        text-align: center;
+    }
+
 }
