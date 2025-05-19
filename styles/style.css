@@ -21,6 +21,11 @@ body {
     display: flex;
 }
 
+a {
+    text-decoration: none;
+}
+
+
 .btn-contato button {
     padding: 10px 40px;
     font-size: 18px;
