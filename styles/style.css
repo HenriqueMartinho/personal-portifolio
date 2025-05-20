@@ -57,6 +57,14 @@ h2.subtitles span {
     text-shadow: 0px 0px 8px gray;
 }
 
+.top-side,
+.projects .navigation,
+.about-me {
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
+}
+
 /* HEADER */
 header {
     padding: 10px 4%;
@@ -65,7 +73,7 @@ header {
     position: fixed;
     width: 100%;
     top: 0;
-    z-index: 1000;
+    z-index: 900;
 }
 
 header>.navigation {
@@ -81,7 +89,7 @@ header a {
     transition: 0.2s;
 }
 
-header a:hover {
+header .menu a:hover {
     color: #fff;
     transform: scale(1.05);
 }
@@ -93,7 +101,7 @@ header nav ul {
     padding: 1rem;
 }
 
-header nav ul li {
+header nav.menu ul li {
     font-size: 18px;
     display: inline-block;
     padding: 0 40px;
@@ -176,6 +184,18 @@ section.top-side .top-side-txt p span:last-child {
 
     100% {
         top: 20px;
+    }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        scale: 0.7;
+    }
+
+    to {
+        opacity: 1;
+        scale: 1;
     }
 }
 
@@ -268,7 +288,7 @@ section.about-me .flex {
     margin: 10px 0;
 }
 
-.about-me .txt-about-me .btn-social button {
+.btn-social button {
     margin: 10px 10px 0px -2px;
     width: 60px;
     height: 60px;
@@ -277,6 +297,101 @@ section.about-me .flex {
     font-size: 22px;
     cursor: pointer;
     transition: .2s;
+}
+
+/* LINEFOOTER */
+
+footer {
+    padding: 30px 4%;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+footer .flex {
+    justify-content: space-between;
+}
+
+footer .line-footer {
+    padding: 10px 0;
+}
+
+.border {
+    border-top: 2px solid #e4e2dd;
+}
+
+.logo-footer img {
+    width: 180px;
+}
+
+footer .line-footer p {
+    padding: 10px 22px;
+    color: #e4e2dd;
+    font-size: 16px;
+}
+
+/* MENU MOBILE */
+.btn-open i{
+    color: #e4e2dd;
+    font-size: 0px;
+}
+
+.menu-mobile {
+    background-color: #242424;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 999;
+    width: 0%;
+    overflow: hidden;
+    transition: .2s;
+}
+
+.menu-mobile.open-menu{
+    width: 40%;
+}
+.menu-mobile.open-menu ~ .ovelay-menu{
+    display: block;
+}
+
+.menu-mobile .btn-close {
+    padding: 20px 5%;
+}
+
+.menu-mobile .btn-close i {
+    color: #e4e2dd;
+    font-size: 20px;
+}
+
+.menu-mobile nav ul {
+    flex-direction: column;
+    padding: 90px 0;
+    text-align: right;
+}
+
+.menu-mobile nav ul li a {
+    color: #e4e2dd;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 20px 8%;
+    display: block;
+}
+
+.menu-mobile nav ul li a:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px black;
+    background-color: #e4e2dd;
+    -webkit-text-fill-color: #242424;
+}
+
+.ovelay-menu{
+    background-color: #0000005e;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 910;
+    display: none;
 }
 
 /* VIEWPORT */
@@ -290,6 +405,13 @@ section.about-me .flex {
     .menu,
     .btn-contato {
         display: none;
+    }
+
+    /* MENU MOBILE */
+
+    .btn-open i{
+    font-size: 40px;
+    padding-right: 30px;
     }
 
     /* TOP-SIDE */
@@ -332,9 +454,21 @@ section.about-me .flex {
 
     /* ABOUT ME */
 
-    .btn-social{
+    .about-me .btn-social {
         padding: 20px;
         text-align: center;
     }
 
+    /* FOOTER */
+    footer .flex {
+        flex-direction: column;
+    }
+
+    footer .line-footer {
+        text-align: center;
+    }
+
+    .line-footer .btn-social {
+        display: none;
+    }
 }
