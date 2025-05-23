@@ -137,12 +137,12 @@ section.top-side .top-side-txt p {
 
 section.top-side .top-side-txt p span {
     font-size: 20px;
-    color: #FFD700;
+    color: #ffa600;
 }
 
 section.top-side .top-side-txt p span:last-child {
     font-size: 18px;
-    color: #6c9ed8;
+    color: #6497d1;
 }
 
 .img-top {
@@ -238,7 +238,12 @@ section.projects .flex {
 
 .projects .project-box h3 {
     font-size: 28px;
+    line-height: 25px;
     margin: 15px 0px;
+}
+
+.projects .project-box h3 span{
+    color: greenyellow;
 }
 
 .project-box img.project-img {
