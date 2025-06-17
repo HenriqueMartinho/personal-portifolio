@@ -1,3 +1,3 @@
 # 💻 Portfólio — Henrique Martinho
 
-![Preview do portfólio](assets/image/preview.png)
+![Preview do portfólio](assets/images/preview.png)
