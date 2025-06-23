@@ -416,8 +416,8 @@ footer .line-footer p {
     /* MENU MOBILE */
 
     .btn-open i{
-    font-size: 40px;
-    padding-right: 30px;
+        font-size: 40px;
+        padding-right: 30px;
     }
 
     /* TOP-SIDE */
@@ -455,7 +455,13 @@ footer .line-footer p {
     /* PROJECTS BOX */
 
     section.projects {
-        padding: 30px 8%
+        padding: 30px 8%;
+    }
+    
+    section.projects .flex{
+
+        flex-direction: row;
+        flex-wrap: nowrap;
     }
 
     /* ABOUT ME */
