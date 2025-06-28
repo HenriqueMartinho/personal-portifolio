@@ -423,7 +423,7 @@ footer .line-footer p {
     /* TOP-SIDE */
     section.top-side {
         margin-left: 0;
-        padding: 140px 4%;
+        padding: 140px 4% 20px;
         text-align: center;
     }
 
@@ -433,7 +433,6 @@ footer .line-footer p {
     }
 
     .img-top {
-        margin-bottom: -120px;
         flex-direction: column;
         align-items: center;
         justify-content: center;
@@ -459,7 +458,7 @@ footer .line-footer p {
     }
     
     section.projects .flex{
-
+        gap: 10px;
         flex-direction: row;
         flex-wrap: nowrap;
     }
@@ -482,5 +481,17 @@ footer .line-footer p {
 
     .line-footer .btn-social {
         display: none;
+    }
+}
+
+/* VIEWPORT */
+
+@media screen and (max-width: 768px) {
+    section.projects {
+        padding: 30px 0 20px;
+    }
+    .projects .project-box h3 {
+        font-size: 20px;
+        line-height: 20px;
     }
 }
